@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signupPage</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        Username : <input type="text" name="username" required> <br><br>
+        Email : <input type="email" name="email" required><br><br>
+        Password : <input type="password" name="password" required><br><br>
+        Confirm Password : <input type="password" name="c_password" required><br>
+        <p>{{result}}</p><br>
+        <button type="submit">Signup</button>
+        <br><br>
+        <a href="{% url 'loginPage' %}">Already have a account ?</a>
+    </form>
+</body>
+</html>
